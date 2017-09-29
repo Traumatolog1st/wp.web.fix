@@ -1,0 +1,916 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 5, ../../../../../../../Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 13, ../components/sass/custom.scss */
+.mejs-container, .svg, .wp-video-shortcode, .mejs-video {
+  width: 728px;
+  height: 500px;
+}
+
+/* line 18, ../components/sass/custom.scss */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Open Sans, sans-serif;
+  background: #162241;
+}
+
+/* line 26, ../components/sass/custom.scss */
+header.header-page {
+  background: url("../img/header_bg.jpg");
+  background-size: cover;
+  height: 950px;
+}
+/* line 31, ../components/sass/custom.scss */
+header.header-page .top-header {
+  height: 215px;
+  position: relative;
+}
+/* line 35, ../components/sass/custom.scss */
+header.header-page .top-header .logo, header.header-page .top-header .menu, header.header-page .top-header .search {
+  display: inline-block;
+}
+/* line 39, ../components/sass/custom.scss */
+header.header-page .top-header .logo {
+  position: absolute;
+  padding: 74px 0 0 96px;
+}
+@media screen and (max-width: 767px) {
+  /* line 39, ../components/sass/custom.scss */
+  header.header-page .top-header .logo {
+    display: block;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    padding: 100px 0 0 0;
+  }
+}
+/* line 50, ../components/sass/custom.scss */
+header.header-page .top-header .logo a {
+  outline: none;
+}
+/* line 55, ../components/sass/custom.scss */
+header.header-page .top-header .search {
+  height: 215px;
+  font-family: Open Sans, serif;
+  position: inherit;
+  float: right;
+  padding: 0 88px 0 15px;
+}
+@media screen and (max-width: 767px) {
+  /* line 55, ../components/sass/custom.scss */
+  header.header-page .top-header .search {
+    display: block;
+    position: absolute;
+    padding: 30px;
+    float: right;
+    height: auto;
+    top: 0;
+    right: 0;
+  }
+}
+/* line 72, ../components/sass/custom.scss */
+header.header-page .top-header .search form {
+  position: relative;
+  height: 28px;
+  width: 193px;
+  top: 50%;
+  margin-top: -14px;
+}
+@media screen and (max-width: 767px) {
+  /* line 72, ../components/sass/custom.scss */
+  header.header-page .top-header .search form {
+    margin: 0;
+  }
+}
+/* line 84, ../components/sass/custom.scss */
+header.header-page .top-header .search form .searchinput {
+  border: 0;
+  font-size: 14px;
+  height: 28px;
+  width: 193px;
+  outline: none;
+  background: url("../img/search.png") no-repeat;
+  padding: 0 0 0 23px;
+}
+/* line 92, ../components/sass/custom.scss */
+header.header-page .top-header .search form .searchinput::-webkit-input-placeholder {
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-style: italic;
+  font-variant: normal;
+  font-weight: 400;
+  color: #dedada;
+}
+/* line 102, ../components/sass/custom.scss */
+header.header-page .top-header .search form button {
+  width: 29px;
+  height: 28px;
+  color: #1bb0ac;
+  font-size: 14px;
+  border: none;
+  padding: 0;
+  margin-right: 8px;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  right: 0;
+  outline: none;
+  cursor: pointer;
+}
+/* line 120, ../components/sass/custom.scss */
+header.header-page .top-header .menu {
+  height: 215px;
+  position: inherit;
+  float: right;
+}
+@media screen and (max-width: 1024px) {
+  /* line 120, ../components/sass/custom.scss */
+  header.header-page .top-header .menu {
+    float: none;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    left: 0;
+    top: 0;
+    background: #162241;
+    opacity: .9;
+  }
+}
+/* line 137, ../components/sass/custom.scss */
+header.header-page .top-header .menu div.burger {
+  display: none;
+  font-size: 40px;
+  color: #fff;
+  text-decoration: none;
+  position: absolute;
+  padding: 24px;
+  z-index: 20;
+}
+@media screen and (max-width: 1024px) {
+  /* line 137, ../components/sass/custom.scss */
+  header.header-page .top-header .menu div.burger {
+    display: block;
+    opacity: 1;
+  }
+}
+/* line 154, ../components/sass/custom.scss */
+header.header-page .top-header .menu .nav {
+  line-height: 215px;
+}
+@media screen and (max-width: 1024px) {
+  /* line 154, ../components/sass/custom.scss */
+  header.header-page .top-header .menu .nav {
+    line-height: 100%;
+    display: none;
+  }
+}
+/* line 163, ../components/sass/custom.scss */
+header.header-page .top-header .menu .nav li {
+  display: inline-block;
+  position: relative;
+  height: 40px;
+}
+@media screen and (max-width: 1024px) {
+  /* line 163, ../components/sass/custom.scss */
+  header.header-page .top-header .menu .nav li {
+    display: block;
+    height: auto;
+  }
+}
+/* line 173, ../components/sass/custom.scss */
+header.header-page .top-header .menu .nav li a {
+  font-family: 'Open Sans';
+  font-weight: 400;
+  font-size: 14px;
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 0 19px 0 19px;
+  height: 100%;
+  line-height: 40px;
+  position: relative;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 1024px) {
+  /* line 173, ../components/sass/custom.scss */
+  header.header-page .top-header .menu .nav li a {
+    padding: 0 0 0 100px;
+  }
+}
+/* line 190, ../components/sass/custom.scss */
+header.header-page .top-header .menu .nav li a:hover, header.header-page .top-header .menu .nav li a:active > .nav > li {
+  z-index: 2;
+  border-top: 1px solid #1bb0ac;
+  border-bottom: 1px solid #1bb0ac;
+  line-height: 38px;
+}
+/* line 197, ../components/sass/custom.scss */
+header.header-page .top-header .menu .nav li a:hover::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  margin-left: -7px;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 6.5px 7px 6.5px;
+  border-color: transparent transparent #1bb0ac transparent;
+}
+/* line 212, ../components/sass/custom.scss */
+header.header-page .top-header .menu .nav li .sub-menu {
+  display: none;
+  background: rgba(16, 21, 42, 0.7);
+  width: 220px;
+  position: absolute;
+  left: 50%;
+  margin-left: -110px;
+  border-bottom: 3px solid #1bb0ac;
+}
+@media screen and (max-width: 1024px) {
+  /* line 212, ../components/sass/custom.scss */
+  header.header-page .top-header .menu .nav li .sub-menu {
+    display: block;
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    left: 0;
+    padding: 0 0 0 100px;
+  }
+}
+/* line 232, ../components/sass/custom.scss */
+header.header-page .top-header .menu .nav li .sub-menu li {
+  display: block;
+  height: auto;
+  margin-left: 21px;
+  margin-right: 21px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+/* line 240, ../components/sass/custom.scss */
+header.header-page .top-header .menu .nav li .sub-menu li:last-child {
+  border-bottom: 0;
+}
+/* line 244, ../components/sass/custom.scss */
+header.header-page .top-header .menu .nav li .sub-menu li a {
+  line-height: normal;
+  margin-left: -21px;
+  margin-right: -21px;
+  padding: 20px 25px;
+}
+/* line 250, ../components/sass/custom.scss */
+header.header-page .top-header .menu .nav li .sub-menu li a:hover, header.header-page .top-header .menu .nav li .sub-menu li a:active {
+  border: 0;
+  margin: 0 -21px 0 -21px;
+  color: #1bb0ac;
+}
+/* line 256, ../components/sass/custom.scss */
+header.header-page .top-header .menu .nav li .sub-menu li a:hover::before {
+  display: none;
+}
+/* line 261, ../components/sass/custom.scss */
+header.header-page .top-header .menu .nav li .sub-menu li > ul {
+  left: 309px;
+  top: 35%;
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+/* line 271, ../components/sass/custom.scss */
+header.header-page .top-header .menu .nav li:hover > ul {
+  display: block;
+}
+/* line 278, ../components/sass/custom.scss */
+header.header-page .bottom-header {
+  font-family: "Open Sans";
+  font-weight: 300;
+}
+/* line 282, ../components/sass/custom.scss */
+header.header-page .bottom-header h1 {
+  font-size: 60px;
+  color: #fff;
+  width: 39%;
+  margin: 121px auto 0 auto;
+  text-align: center;
+}
+@media screen and (max-width: 1024px) {
+  /* line 282, ../components/sass/custom.scss */
+  header.header-page .bottom-header h1 {
+    font-size: 40px;
+    width: 100%;
+    margin: 71px auto 0 auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* line 282, ../components/sass/custom.scss */
+  header.header-page .bottom-header h1 {
+    font-size: 30px;
+    width: 100%;
+  }
+}
+/* line 301, ../components/sass/custom.scss */
+header.header-page .bottom-header p {
+  font-size: 16px;
+  color: #9fa6c2;
+  width: 50%;
+  margin: 19px auto 0 auto;
+  text-align: center;
+}
+@media screen and (max-width: 1024px) {
+  /* line 301, ../components/sass/custom.scss */
+  header.header-page .bottom-header p {
+    font-size: 20px;
+    width: 100%;
+    padding: 0 auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* line 301, ../components/sass/custom.scss */
+  header.header-page .bottom-header p {
+    font-size: 15px;
+    width: 100%;
+    padding: 0 auto;
+  }
+}
+/* line 319, ../components/sass/custom.scss */
+header.header-page .bottom-header a {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+  line-height: 55px;
+  text-transform: uppercase;
+  color: #1bb0ac;
+  height: 55px;
+  width: 257px;
+  margin: 90px auto 0 auto;
+  border-radius: 0;
+  background: transparent;
+  border: 1px solid #1bb0ac;
+}
+/* line 336, ../components/sass/custom.scss */
+header.header-page .bottom-header div.line {
+  width: 1px;
+  height: 129px;
+  border-left: 1px solid #1bb0ac;
+  margin: 117px auto 0 auto;
+  position: relative;
+}
+/* line 343, ../components/sass/custom.scss */
+header.header-page .bottom-header div.line::before {
+  content: '\f111';
+  font: normal normal normal 4px/1 FontAwesome;
+  color: #1bb0ac;
+  position: absolute;
+  top: 0;
+  margin: -1px 0 0 -2px;
+}
+/* line 351, ../components/sass/custom.scss */
+header.header-page .bottom-header div.line::after {
+  content: '\f111';
+  font: normal normal normal 4px/1 FontAwesome;
+  color: #1bb0ac;
+  position: absolute;
+  bottom: 0;
+  margin: 0 0 -1px -2px;
+}
+
+/* line 365, ../components/sass/custom.scss */
+section.advantages div.container div.entry-header {
+  height: 468px;
+  font-family: "Open Sans";
+  font-weight: 300;
+  position: relative;
+}
+/* line 373, ../components/sass/custom.scss */
+section.advantages div.container div.entry-header .bglogo {
+  width: 268px;
+  height: 503px;
+  background: url("../img/bottomlogo.png") no-repeat;
+  position: absolute;
+  top: -35px;
+}
+/* line 382, ../components/sass/custom.scss */
+section.advantages div.container div.entry-header h1 {
+  font-size: 60px;
+  color: #fff;
+  width: 39%;
+  margin: 0 auto 0 auto;
+  padding-top: 20px;
+  text-align: center;
+}
+@media screen and (max-width: 1024px) {
+  /* line 382, ../components/sass/custom.scss */
+  section.advantages div.container div.entry-header h1 {
+    font-size: 40px;
+    width: 100%;
+    padding: 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* line 382, ../components/sass/custom.scss */
+  section.advantages div.container div.entry-header h1 {
+    font-size: 30px;
+    width: 100%;
+    padding: 0;
+  }
+}
+/* line 403, ../components/sass/custom.scss */
+section.advantages div.container div.entry-header p {
+  font-size: 16px;
+  line-height: 30px;
+  color: #9fa6c2;
+  width: 570px;
+  margin: 90px auto 0 auto;
+  text-align: center;
+}
+@media screen and (max-width: 1024px) {
+  /* line 403, ../components/sass/custom.scss */
+  section.advantages div.container div.entry-header p {
+    width: 100%;
+    padding: 0;
+  }
+}
+/* line 417, ../components/sass/custom.scss */
+section.advantages div.container div.our-prod {
+  position: relative;
+  font-family: "Open Sans";
+  font-weight: 300;
+  background: #fff;
+  height: 505px;
+}
+@media screen and (max-width: 1249px) {
+  /* line 417, ../components/sass/custom.scss */
+  section.advantages div.container div.our-prod {
+    height: auto;
+  }
+}
+/* line 428, ../components/sass/custom.scss */
+section.advantages div.container div.our-prod h1 {
+  font-size: 60px;
+  color: #2a5285;
+  width: 100%;
+  padding: 106px 728px 0 95px;
+  text-align: left;
+}
+@media screen and (max-width: 1249px) {
+  /* line 428, ../components/sass/custom.scss */
+  section.advantages div.container div.our-prod h1 {
+    font-size: 30px;
+    width: 90%;
+    padding: 5%;
+  }
+}
+/* line 442, ../components/sass/custom.scss */
+section.advantages div.container div.our-prod p {
+  font-size: 16px;
+  line-height: 30px;
+  color: #828799;
+  padding: 43px 728px 0 107px;
+}
+@media screen and (max-width: 1249px) {
+  /* line 442, ../components/sass/custom.scss */
+  section.advantages div.container div.our-prod p {
+    width: 90%;
+    padding: 5%;
+  }
+}
+/* line 456, ../components/sass/custom.scss */
+section.advantages div.container div.our-prod div.video {
+  position: absolute;
+  right: 0;
+  top: -147px;
+  width: 728px;
+  height: 500px;
+}
+@media screen and (max-width: 1249px) {
+  /* line 456, ../components/sass/custom.scss */
+  section.advantages div.container div.our-prod div.video {
+    position: relative;
+    top: 0;
+    width: 728px;
+    height: 500px;
+    background-size: cover;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* line 456, ../components/sass/custom.scss */
+  section.advantages div.container div.our-prod div.video {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: auto;
+    background-size: cover;
+  }
+}
+
+/* line 491, ../components/sass/custom.scss */
+section.supply-partners h1 {
+  font-family: "Open Sans";
+  font-size: 60px;
+  color: #2a5285;
+  font-weight: 300;
+  text-align: center;
+  padding-top: 86px;
+}
+@media screen and (max-width: 1024px) {
+  /* line 491, ../components/sass/custom.scss */
+  section.supply-partners h1 {
+    font-size: 40px;
+    width: 100%;
+    padding: 10%;
+    padding-bottom: 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* line 491, ../components/sass/custom.scss */
+  section.supply-partners h1 {
+    font-size: 30px;
+    width: 100%;
+    padding: 5%;
+    padding-bottom: 0;
+  }
+}
+/* line 512, ../components/sass/custom.scss */
+section.supply-partners div.commercial {
+  background: url("../img/msbg.png");
+  background-size: cover;
+  height: 630px;
+}
+@media screen and (max-width: 767px) {
+  /* line 512, ../components/sass/custom.scss */
+  section.supply-partners div.commercial {
+    height: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* line 520, ../components/sass/custom.scss */
+  section.supply-partners div.commercial h1 {
+    padding-bottom: 100px;
+  }
+}
+@media screen and (max-width: 425px) {
+  /* line 520, ../components/sass/custom.scss */
+  section.supply-partners div.commercial h1 {
+    padding-bottom: 0;
+  }
+}
+/* line 529, ../components/sass/custom.scss */
+section.supply-partners div.commercial div.supply {
+  display: inline-block;
+  width: 20%;
+  margin-top: 135px;
+  position: relative;
+  left: 10%;
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  /* line 529, ../components/sass/custom.scss */
+  section.supply-partners div.commercial div.supply {
+    display: inline-block;
+    width: 48%;
+    left: 0;
+    vertical-align: middle;
+    margin: 0;
+    margin-bottom: 135px;
+  }
+}
+@media screen and (max-width: 425px) {
+  /* line 529, ../components/sass/custom.scss */
+  section.supply-partners div.commercial div.supply {
+    display: block;
+    width: 100%;
+    left: 0;
+    margin-top: 80px;
+    margin-bottom: 0;
+  }
+}
+/* line 553, ../components/sass/custom.scss */
+section.supply-partners div.commercial div.supply a {
+  display: block;
+  position: absolute;
+  width: 100%;
+  margin: 42px 0 143px 0;
+  font-size: 24px;
+  color: #295182;
+  font-weight: 400;
+  text-decoration: none;
+  line-height: 53px;
+}
+@media screen and (max-width: 767px) {
+  /* line 553, ../components/sass/custom.scss */
+  section.supply-partners div.commercial div.supply a {
+    margin: 0;
+    position: absolute;
+  }
+}
+@media screen and (max-width: 425px) {
+  /* line 553, ../components/sass/custom.scss */
+  section.supply-partners div.commercial div.supply a {
+    margin: 0;
+    position: relative;
+  }
+}
+/* line 572, ../components/sass/custom.scss */
+section.supply-partners div.commercial div.supply a:hover {
+  border: 1px solid #1bb0ac;
+  margin: 41px 0 141px 0;
+  color: #1bb0ac;
+}
+@media screen and (max-width: 767px) {
+  /* line 572, ../components/sass/custom.scss */
+  section.supply-partners div.commercial div.supply a:hover {
+    margin: 0;
+  }
+}
+/* line 586, ../components/sass/custom.scss */
+section.supply-partners div.our-partners {
+  height: 535px;
+  background: #fff;
+  width: 100%;
+}
+@media screen and (max-width: 767px) {
+  /* line 586, ../components/sass/custom.scss */
+  section.supply-partners div.our-partners {
+    height: auto;
+  }
+}
+/* line 595, ../components/sass/custom.scss */
+section.supply-partners div.our-partners h1 {
+  padding-top: 106px;
+  padding-bottom: 60px;
+}
+@media screen and (max-width: 767px) {
+  /* line 595, ../components/sass/custom.scss */
+  section.supply-partners div.our-partners h1 {
+    padding: 70px 0 30px 0;
+  }
+}
+/* line 604, ../components/sass/custom.scss */
+section.supply-partners div.our-partners div.partner {
+  display: inline-block;
+  width: 23%;
+  max-width: 98%;
+  height: 200px;
+  position: relative;
+  text-align: center;
+  line-height: 200px;
+}
+@media screen and (max-width: 767px) {
+  /* line 604, ../components/sass/custom.scss */
+  section.supply-partners div.our-partners div.partner {
+    width: 23%;
+  }
+}
+/* line 620, ../components/sass/custom.scss */
+section.supply-partners div.our-partners div.partner img {
+  vertical-align: middle;
+}
+
+/* line 631, ../components/sass/custom.scss */
+footer div.contact-us {
+  font-family: "Open Sans";
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 70px;
+  background: url("../img/contactus-bg.png");
+  background-size: cover;
+}
+/* line 642, ../components/sass/custom.scss */
+footer div.contact-us form h1 {
+  font-size: 60px;
+  font-weight: 300;
+  text-align: center;
+  padding-top: 90px;
+  padding-bottom: 63px;
+}
+@media screen and (max-width: 767px) {
+  /* line 642, ../components/sass/custom.scss */
+  footer div.contact-us form h1 {
+    font-size: 30px;
+    width: 100%;
+    margin: 0;
+    padding: 50px 0 20px 0;
+  }
+}
+/* line 657, ../components/sass/custom.scss */
+footer div.contact-us form div.form-item {
+  height: 55px;
+  position: relative;
+  margin-bottom: 15px;
+}
+@media screen and (max-width: 767px) {
+  /* line 657, ../components/sass/custom.scss */
+  footer div.contact-us form div.form-item {
+    height: auto;
+  }
+}
+/* line 666, ../components/sass/custom.scss */
+footer div.contact-us form div.form-item h2 {
+  font-size: 24px;
+  display: inline-block;
+  width: 10%;
+  text-align: right;
+  line-height: 55px;
+  position: absolute;
+  right: 50%;
+  margin-right: 194px;
+}
+@media screen and (max-width: 767px) {
+  /* line 666, ../components/sass/custom.scss */
+  footer div.contact-us form div.form-item h2 {
+    display: block;
+    margin: 0;
+    font-size: 14px;
+    line-height: 100%;
+    text-align: left;
+    width: 90%;
+    left: 10%;
+    position: relative;
+  }
+}
+/* line 689, ../components/sass/custom.scss */
+footer div.contact-us form div.form-item .wpcf7-not-valid-tip {
+  text-align: center;
+}
+/* line 694, ../components/sass/custom.scss */
+footer div.contact-us form div.form-item input {
+  display: inline-block;
+  position: relative;
+  width: 326px;
+  height: 53px;
+  left: 50%;
+  margin-left: -163px;
+  border: 1px solid #fff;
+  border-radius: 0;
+  color: #fff;
+  background: transparent;
+}
+@media screen and (max-width: 767px) {
+  /* line 694, ../components/sass/custom.scss */
+  footer div.contact-us form div.form-item input {
+    width: 98%;
+    display: block;
+    margin: 1%;
+    padding: 0;
+    left: 0;
+  }
+}
+/* line 714, ../components/sass/custom.scss */
+footer div.contact-us form div.form-item input::-webkit-input-placeholder {
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-style: italic;
+  font-variant: normal;
+  font-weight: 400;
+  color: #fff;
+  padding-left: 20px;
+}
+/* line 725, ../components/sass/custom.scss */
+footer div.contact-us form div.form-item textarea {
+  display: inline-block;
+  position: relative;
+  width: 326px;
+  height: 200px;
+  left: 50%;
+  margin-left: -163px;
+  border-radius: 0;
+}
+@media screen and (max-width: 767px) {
+  /* line 725, ../components/sass/custom.scss */
+  footer div.contact-us form div.form-item textarea {
+    width: 98%;
+    display: block;
+    margin: 1%;
+    padding: 0;
+    left: 0;
+  }
+}
+/* line 744, ../components/sass/custom.scss */
+footer div.contact-us form div.form-item input.submit {
+  display: block;
+  position: relative;
+  width: 164px;
+  height: 53px;
+  left: 50%;
+  margin-left: -82px;
+  margin-top: 175px;
+  border: 1px solid #0addbc;
+  font-size: 16px;
+  color: #0addbc;
+  margin-bottom: 70px;
+  outline: none;
+}
+@media screen and (max-width: 767px) {
+  /* line 744, ../components/sass/custom.scss */
+  footer div.contact-us form div.form-item input.submit {
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+}
+/* line 764, ../components/sass/custom.scss */
+footer div.contact-us form div.form-item input[type=text].wpcf7-not-valid,
+footer div.contact-us form div.form-item input[type=email].wpcf7-not-valid,
+footer div.contact-us form div.form-item input[type=tel].wpcf7-not-valid {
+  border: 1px solid #ec3c06;
+}
+/* line 771, ../components/sass/custom.scss */
+footer div.contact-us form .wpcf7-response-output {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  border: 0;
+}
+/* line 780, ../components/sass/custom.scss */
+footer div.copyright {
+  font-family: 'Open Sans';
+  font-size: 16px;
+  line-height: 44px;
+  text-align: center;
+  color: #868a9a;
+}
+@media screen and (max-width: 767px) {
+  /* line 780, ../components/sass/custom.scss */
+  footer div.copyright {
+    font-size: 10px;
+  }
+}
+
+/* line 793, ../components/sass/custom.scss */
+.responsive {
+  width: 98%;
+}
+/* line 795, ../components/sass/custom.scss */
+.responsive .slick-arrow {
+  display: none;
+}

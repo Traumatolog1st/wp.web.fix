@@ -1,0 +1,802 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "mixins";
+
+html{
+	// background: rgb(22,34,65);
+}
+
+.mejs-container, .svg, .wp-video-shortcode, .mejs-video {
+					width: 728px;
+					height: 500px;
+				}
+
+body {
+	margin:0;
+	padding:0;
+	font-family: Open Sans, sans-serif;
+	// background: url('../img/header_bg.jpg') no-repeat;
+	background: rgb(22,34,65);
+}
+
+header.header-page {
+	background: url('../img/header_bg.jpg');
+	background-size: cover;
+	height: 950px;
+
+	.top-header {
+		height: 215px;
+		position: relative;
+
+		.logo, .menu, .search {
+			display: inline-block;
+		}
+
+		.logo {
+			position: absolute;
+			padding: 74px 0 0 96px;
+			@include mediaMax(767) {
+				display: block;
+				position: relative;
+				width: 100%;
+				text-align: center;
+				padding:100px 0 0 0;
+			}
+
+			a {
+				outline: none;
+			}
+		}
+
+		.search {
+			height: 215px;
+			font-family: Open Sans, serif;
+			position: inherit;
+			float: right;
+			padding: 0 88px 0 15px;
+
+			@include mediaMax(767) {
+				display: block;
+				position: absolute;
+				padding: 30px;
+				float: right;
+				height: auto;
+				top: 0;
+				right: 0;
+			}
+
+			form { 
+				position:relative;
+				height: 28px;
+				width: 193px;
+				top: 50%;
+				margin-top: -14px;
+
+				@include mediaMax(767) {
+					margin: 0;
+
+				}
+
+				.searchinput {
+				border: 0;
+				font-size: 14px;
+				height: 28px;
+				width: 193px;
+				outline: none;
+				background: url('../img/search.png') no-repeat;
+				padding: 0 0 0 23px;
+				&::-webkit-input-placeholder {
+					font-family: "Open Sans";
+					font-size: 14px;
+					font-style: italic;
+					font-variant: normal;
+					font-weight: 400;
+					color:#dedada;
+				}
+			}
+
+				button {
+					width: 29px;
+					height: 28px;
+					color: #1bb0ac;
+					font-size: 14px;
+					border: none;
+					padding: 0;
+					margin-right: 8px;
+					background-color: transparent;
+					position:absolute;
+					top:0;
+					right:0;
+					outline: none;
+					cursor: pointer;
+				}
+			}
+		}
+
+		.menu {
+			height: 215px;
+			position: inherit;
+			float: right;
+
+			@include mediaMax(1024) {
+				float: none;
+				position: absolute;
+				width: 100%;
+				height: auto;
+				left: 0;
+				top: 0;
+				background: rgb(22,34,65);
+				opacity: .9;
+				// display: none;
+			}
+
+			div.burger {
+				display: none;
+				font-size: 40px;
+				color: #fff;
+				text-decoration: none;
+				// width: 40px;
+				position: absolute;
+				padding: 24px;
+				z-index: 20;	
+					
+				@include mediaMax(1024) {
+					display: block;
+					opacity: 1;
+				}
+
+			}
+
+			.nav {
+					line-height: 215px;
+					// display: none;
+					@include mediaMax(1024) {
+						line-height: 100%;
+						display: none;
+						// opacity: 0;
+					}
+					
+				li {
+					display: inline-block;
+					position: relative;
+					height: 40px;
+
+					@include mediaMax(1024) {
+						display:block;
+						height: auto;
+					}
+
+					a {
+						font-family: 'Open Sans';
+						font-weight: 400;
+						font-size: 14px;
+						color: #fff;
+						text-decoration: none;
+						display: block;
+						padding: 0 19px 0 19px;
+						height:100%;
+						line-height: 40px;
+						position: relative;
+						box-sizing: border-box;
+
+						@include mediaMax(1024) {
+							padding: 0 0 0 100px;
+						}
+
+						&:hover, &:active > .nav>li{
+							z-index: 2;
+							border-top: 1px solid #1bb0ac;
+							border-bottom: 1px solid #1bb0ac;
+							line-height: 38px;
+						}
+
+						&:hover::before {
+							content: '';
+							position: absolute;
+							left: 50%;
+							bottom: 0;
+							margin-left: -7px; 
+							display: inline-block;
+							width: 0;
+							height: 0;
+							border-style: solid;
+							border-width: 0 6.5px 7px 6.5px;
+							border-color: transparent transparent #1bb0ac transparent;
+						}
+					}
+
+					.sub-menu {
+						display:none;
+						background: rgba(16,21,42,0.7);
+						width: 220px;
+						position:absolute;
+						left: 50%;
+						margin-left: -110px;
+						border-bottom: 3px solid #1bb0ac;
+
+						@include mediaMax(1024) {
+							display: block;
+							position: relative;
+							width: 100%;
+							margin: 0;
+							padding: 0;
+							border: none;
+							left: 0;
+							padding: 0 0 0 100px;
+						}
+
+						li {
+							display: block;
+							height: auto;
+							margin-left: 21px;
+							margin-right: 21px;
+							border-bottom: 1px solid rgba(255,255,255,0.2);
+							// box-sizing: border-box;
+
+							&:last-child {
+								border-bottom: 0;
+							}
+
+							a {
+								line-height: normal;
+								margin-left: -21px;
+								margin-right: -21px;
+								padding: 20px 25px;
+
+								&:hover, &:active {
+									border: 0;
+									margin:0 -21px 0 -21px;
+									color: #1bb0ac;
+								}
+
+								&:hover::before {
+									display: none;
+								}
+							}
+
+							& > ul {
+								left: 309px;
+								top: 35%;
+								border-left: 1px solid rgba(255,255,255,0.2);
+							}
+						}
+
+					}
+				}
+
+				& li:hover > ul {
+					display: block;
+				}
+			}
+		}
+	}
+
+	.bottom-header{
+		font-family: "Open Sans";
+		font-weight: 300;
+
+		h1 {
+			font-size: 60px;
+			color: #fff;
+			width: 39%;
+			// margin-left: auto;
+			// margin-right: auto;
+			margin: 121px auto 0 auto;
+			text-align: center;
+			@include mediaMax(1024) {
+				font-size: 40px;
+				width: 100%;
+				margin: 71px auto 0 auto;
+			}
+			@include mediaMax(767) {
+				font-size: 30px;
+				width: 100%;
+			}
+		}
+
+		p {
+			font-size: 16px;
+			color: #9fa6c2;
+			width: 50%;
+			margin: 19px auto 0 auto;
+			text-align: center;
+			@include mediaMax(1024) {
+				font-size: 20px;
+				width: 100%;
+				padding: 0 auto;
+			}
+			@include mediaMax(767) {
+				font-size: 15px;
+				width: 100%;
+				padding: 0 auto;
+			}
+		}
+
+		a {
+			display: block;
+			font-size: 14px;
+			font-weight: 700;
+			text-decoration: none;
+			text-align: center;
+			line-height: 55px;
+			text-transform: uppercase;
+			color: #1bb0ac;
+			height: 55px;
+			width: 257px;
+			margin: 90px auto 0 auto;
+			border-radius: 0;
+			background: transparent;
+			border: 1px solid #1bb0ac;
+		}
+
+		div.line {
+			width: 1px;
+			height: 129px;
+			border-left: 1px solid #1bb0ac;
+			margin: 117px auto 0 auto;
+			position: relative;
+
+			&::before {
+				content: '\f111';
+				font: normal normal normal 4px/1 FontAwesome;
+				color: #1bb0ac;
+				position: absolute;
+				top: 0;
+				margin: -1px 0 0 -2px;
+			}
+			&::after {
+				content: '\f111';
+				font: normal normal normal 4px/1 FontAwesome;
+				color: #1bb0ac;
+				position: absolute;
+				bottom: 0;
+				margin: 0 0 -1px -2px;
+			}
+		}
+	}
+}
+
+section.advantages {
+	div.container {
+		div.entry-header {
+			height: 468px;
+			font-family: "Open Sans";
+			font-weight: 300;
+			position: relative;
+			// background: url('../img/bottomlogo.png') no-repeat;
+
+
+			.bglogo {
+				width: 268px;
+				height: 503px;
+				background: url('../img/bottomlogo.png') no-repeat;
+				position: absolute;
+				top: -35px;
+
+			}
+
+			h1 {
+				font-size: 60px;
+				color: #fff;
+				width: 39%;
+				// margin-left: auto;
+				// margin-right: auto;
+				margin: 0 auto 0 auto;
+				padding-top: 20px;
+				text-align: center;
+				@include mediaMax(1024) {
+					font-size: 40px;
+					width: 100%;
+					padding: 0;
+				}
+				@include mediaMax(767) {
+					font-size: 30px;
+					width: 100%;
+					padding: 0;
+				}
+			}
+
+			p {
+				font-size: 16px;
+				line-height: 30px;
+				color: #9fa6c2;
+				width: 570px;
+				margin: 90px auto 0 auto;
+				text-align: center;
+				@include mediaMax(1024) {
+					width: 100%;
+					padding: 0;
+				}
+			}
+		}
+
+		div.our-prod {
+			position: relative;
+			font-family: "Open Sans";
+			font-weight: 300;
+			background: #fff;
+			height: 505px;
+
+			@include mediaMax(1249) {
+				height: auto;
+			}
+
+			h1 {
+				font-size: 60px;
+				color: #2a5285;
+				width: 100%;
+				padding: 106px 728px 0 95px;
+				// margin: 106px 0 0 95px;
+				text-align: left;
+				@include mediaMax(1249) {
+					font-size: 30px;
+					width: 90%;
+					padding: 5%;
+				}
+			}
+
+			p {
+				font-size: 16px;
+				line-height: 30px;
+				color: #828799;
+				// width: 40%;
+				// margin: 43px 0 0 107px;
+				padding: 43px 728px 0 107px;
+				// text-align: left;
+				@include mediaMax(1249) {
+					width: 90%;
+					padding: 5%;
+				}
+			}
+
+			div.video {
+				position: absolute;
+				right: 0;
+				top: -147px;
+				width: 728px;
+				height: 500px;
+				// background: url('../img/video.png');
+				// display:none;
+
+				
+
+				@include mediaMax(1249) {
+					position: relative;
+					top: 0;
+					width: 728px;
+					height: 500px;
+					background-size: cover;
+					margin: 0 auto;
+				}
+
+				@include mediaMax(767) {
+					position: relative;
+					top: 0;
+					width: 100%;
+					height: auto;
+					background-size: cover;
+				}
+			}
+
+
+		}
+	}
+}
+
+section.supply-partners {					
+	h1 {
+		font-family: "Open Sans";
+		font-size: 60px;
+		color: #2a5285;
+		font-weight: 300;
+		text-align: center;
+		padding-top: 86px;
+		@include mediaMax(1024) {
+			font-size: 40px;
+			width: 100%;
+			padding: 10%;
+			padding-bottom: 0;
+		}
+		@include mediaMax(767) {
+			font-size: 30px;
+			width: 100%;
+			padding: 5%;
+			padding-bottom: 0;
+		}
+	}
+
+	div.commercial {
+		background: url('../img/msbg.png');
+		background-size: cover;
+		height: 630px;
+		@include mediaMax(767) {
+			height: auto;
+		}
+
+		h1 {
+			@include mediaMax(767) {
+				padding-bottom: 100px;
+			}
+			@include mediaMax(425) {
+				padding-bottom: 0;
+			}
+		}
+
+		div.supply {
+			display: inline-block;
+			width: 20%;
+			margin-top: 135px;
+			position: relative;
+			left: 10%;
+			text-align: center;
+
+			@include mediaMax(767) {
+				display: inline-block;
+				width: 48%;
+				left: 0;
+				vertical-align: middle;
+				margin: 0;
+				margin-bottom: 135px;
+			}
+			@include mediaMax(425) {
+				display: block;
+				width: 100%;
+				left: 0;
+				margin-top: 80px;
+				margin-bottom: 0;
+			}
+
+			a {
+				display: block;
+				position: absolute;
+				width: 100%;
+				margin: 42px 0 143px 0;
+				font-size: 24px;
+				color: #295182;
+				font-weight: 400;
+				text-decoration: none;
+				line-height: 53px;
+				@include mediaMax(767) {
+					margin: 0;
+					position: absolute;
+				}
+				@include mediaMax(425) {
+					margin: 0;
+					position: relative;
+				}
+
+				&:hover {
+					border: 1px solid #1bb0ac;
+					margin: 41px 0 141px 0;
+					// line-height: 51px;
+					color: #1bb0ac;
+
+					@include mediaMax(767) {
+						margin: 0;
+					}
+				}
+			}
+		}
+	}
+
+	div.our-partners {
+			height: 535px;
+			background: #fff;
+			width: 100%;
+
+			@include mediaMax(767) {
+				height: auto;
+			}
+
+			h1 {
+				padding-top: 106px;
+				padding-bottom: 60px;
+
+				@include mediaMax(767) {
+					padding: 70px 0 30px 0;
+				}
+			}
+
+			div.partner {
+				display: inline-block;
+				width: 23%;
+				max-width: 98%;
+				height: 200px;
+				position: relative;
+				// left: 4%;
+				text-align: center;
+				line-height: 200px;
+
+				@include mediaMax(767) {
+					width: 23%;
+					// left: 2%;
+				}
+
+
+				img {
+					vertical-align: middle;
+				}
+			}
+
+
+		}
+}
+
+footer {
+
+	div.contact-us {
+		font-family: "Open Sans";
+		color:#fff;
+		margin: 0;
+		padding: 0;
+		padding-bottom: 70px;
+		background: url('../img/contactus-bg.png');
+		background-size: cover;
+
+		form {
+
+			h1 {
+				font-size: 60px;
+				font-weight: 300;
+				text-align: center;
+				padding-top: 90px;
+				padding-bottom: 63px;
+
+				@include mediaMax(767) {
+					font-size: 30px;
+					width: 100%;
+					margin: 0;
+					padding: 50px 0 20px 0;
+				}
+			}
+
+			div.form-item {
+				height: 55px;
+				position: relative;
+				margin-bottom: 15px;
+
+				@include mediaMax(767) {
+					height: auto;
+				}
+
+				h2 {
+					font-size: 24px;
+					display: inline-block;
+					width: 10%;
+					text-align: right;
+					line-height: 55px;
+					position: absolute;
+					right: 50%;
+					margin-right: 194px;
+
+					@include mediaMax(767) {
+						display: block;
+						margin:0;
+						font-size: 14px;
+						line-height: 100%;
+						text-align: left;
+						width: 90%;
+						left: 10%;
+						position: relative;
+
+					}
+				}
+
+				.wpcf7-not-valid-tip {
+					text-align: center;
+				}
+
+
+				input {
+					display: inline-block;
+					position: relative;
+					width: 326px;
+					height: 53px;
+					left: 50%;
+					margin-left: -163px;
+					border: 1px solid #fff;
+					border-radius: 0;
+					color: #fff;
+					background: transparent;
+
+					@include mediaMax(767) {
+						width: 98%;
+						display: block;
+						margin: 1%;
+						padding: 0;
+						left: 0;
+					}
+
+					&::-webkit-input-placeholder {
+						font-family: "Open Sans";
+						font-size: 14px;
+						font-style: italic;
+						font-variant: normal;
+						font-weight: 400;
+						color:#fff;
+						padding-left: 20px;
+					}
+				}
+
+				textarea {
+					display: inline-block;
+					position: relative;
+					width: 326px;
+					height: 200px;
+					left: 50%;
+					margin-left: -163px;
+					border-radius: 0;	
+
+					@include mediaMax(767) {
+						width: 98%;
+						display: block;
+						margin: 1%;
+						padding: 0;
+						left: 0;
+					}
+
+				}
+
+				input.submit {
+					display: block;
+					position: relative;
+					width: 164px;
+					height: 53px;
+					left: 50%;
+					margin-left: -82px;
+					margin-top: 175px;
+					border: 1px solid #0addbc;
+					font-size: 16px;	
+					color: #0addbc;
+					margin-bottom: 70px;
+					outline: none;
+
+					@include mediaMax(767) {
+						margin-top: 25px;
+						margin-bottom: 25px;
+					}
+				}
+
+				input[type=text].wpcf7-not-valid,
+				input[type=email].wpcf7-not-valid,
+				input[type=tel].wpcf7-not-valid {
+					border: 1px solid #ec3c06;
+				}
+			}	
+
+			.wpcf7-response-output{
+					position: absolute;
+					width: 100%;
+					text-align: center;
+					border: 0;
+				}	
+		}
+	}
+
+	div.copyright {
+		font-family: 'Open Sans';
+		font-size: 16px;
+		line-height: 44px;
+		text-align: center;
+		color: #868a9a;
+
+		@include mediaMax(767) {
+			font-size: 10px;
+		}
+	}
+}
+
+.responsive {
+	width: 98%;
+	.slick-arrow {
+					display: none;
+				}
+}
+
+
+
+
