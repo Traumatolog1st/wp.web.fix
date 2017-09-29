@@ -148,6 +148,8 @@ function jackson_styles() {
 
     wp_register_style('slickthemestyle', get_template_directory_uri() . '/slick/slick-theme.css', array(), filemtime(get_template_directory() . '/slick/slick-theme.css'), 'all');
 
+    wp_enqueue_style('slickstyle');
+    wp_enqueue_style('slickthemestyle');
     wp_enqueue_style('themestyle');
 }
 

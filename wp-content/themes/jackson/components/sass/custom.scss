@@ -10,11 +10,6 @@ html{
 	// background: rgb(22,34,65);
 }
 
-.mejs-container, .svg, .wp-video-shortcode, .mejs-video {
-					width: 728px;
-					height: 500px;
-				}
-
 body {
 	margin:0;
 	padding:0;
@@ -459,10 +454,37 @@ section.advantages {
 				top: -147px;
 				width: 728px;
 				height: 500px;
+				max-width: 100% !important;
 				// background: url('../img/video.png');
 				// display:none;
 
-				
+				.wp-video {
+					max-width: 100%;
+					// width: 100%;
+					margin: 0 auto;
+
+					@include mediaMin(768) {
+						width:728px !important;
+					}
+				}
+
+				.mejs-container, .svg, .wp-video-shortcode, .mejs-video {
+					// height: 500px !important;
+					width: 728px !important;
+
+
+					@include mediaMin(768) {
+						height: 500px !important;
+					}
+					@include mediaMax(767) {
+						position: relative;
+						margin: 0 auto;
+						top: 0;
+						width: 100%  !important;
+						height: auto;
+						background-size: cover;
+					}	
+				}
 
 				@include mediaMax(1249) {
 					position: relative;
@@ -604,21 +626,25 @@ section.supply-partners {
 			div.partner {
 				display: inline-block;
 				width: 23%;
-				max-width: 98%;
+				// max-width: 98%;
 				height: 200px;
 				position: relative;
 				// left: 4%;
 				text-align: center;
 				line-height: 200px;
 
-				@include mediaMax(767) {
-					width: 23%;
-					// left: 2%;
-				}
+				// display: table-cell;
+
+				// @include mediaMax(767) {
+				// 	width: 23%;
+				// 	// left: 2%;
+				// }
 
 
 				img {
 					vertical-align: middle;
+					// height: auto;
+					display: inline;
 				}
 			}
 
